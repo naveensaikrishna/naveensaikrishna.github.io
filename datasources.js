@@ -3,8 +3,10 @@
 
 // Wrap everything in an anonymous function to avoid polluting the global namespace
 (function () {
+	alert(0);
   $(document).ready(function () {
 
+	alert(1);
     tableau.extensions.initializeAsync().then(function () {
       // Since dataSource info is attached to the worksheet, we will perform
       // one async call per worksheet to get every dataSource used in this
