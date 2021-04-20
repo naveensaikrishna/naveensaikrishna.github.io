@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Datasources Sample</title>
+    <style>
+        .hide {
+            display: none!important;
+        }
+        #my_dataviz {
+            position: relative;
+        }
+        .tooltip_div {
+            
+            display: none;
+            position:absolute;
+            background-color: #f1f1f1;
+            padding: 0;
+            box-shadow: 1px 1px 1px 1px #f2f2f2;
+            border: 1px solid #9c9c9c;
+        }
+
+        .tooltip_div ul {
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div id="my_dataviz">
+
+        </div>
+
+        <div id="tooltip_div" class="tooltip_div">
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+    <!-- Extensions Library (this will be hosted on a CDN eventually) -->
+    <script src="../../lib/tableau.extensions.1.latest.js"></script>
+
+    <!-- Our extension's code -->
+    <script src="./dataSources_trial.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="chart.js"></script>
+  </body>
+</html>
