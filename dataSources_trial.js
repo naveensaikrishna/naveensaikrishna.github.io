@@ -30,7 +30,7 @@
 
       Promise.all(dataSourceFetchPromises).then( (dataSources) => {
         
-        alert("DS " + dataSources.length)
+        //alert("DS " + dataSources.length)
         let data = {};
         dataSources.forEach(function (dataSource,i) {
 
@@ -66,7 +66,7 @@
             })
           } 
 
-          alert("FD "+JSON.stringify(full_data))
+          //alert("FD "+JSON.stringify(full_data))
           chart(full_data)
         }) 
       })
