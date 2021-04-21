@@ -30,7 +30,7 @@ function chart(full_data) {
 
     
     // set the dimensions and margins of the graph
-    let margin = {top: 20, right: 30, bottom: 20, left: 30},
+    let margin = {top: 20, right: 30, bottom: 50, left: 30},
     width = window.innerWidth - margin.left - margin.right,
     height = window.innerHeight - margin.top - margin.bottom;
 
@@ -68,6 +68,11 @@ function chart(full_data) {
     let r = d3.scaleLinear()
         .range([15,30])
         .domain(d3.extent(full_data.nodes, d=> parseFloat(d["WD end"])-parseFloat(d['WD Start'])))
+
+    paths
+        .append("g")
+        .attr("transform", "translate(0,"+height+")")      // This controls the vertical position of the Axis
+        .call(d3.axisBottom(x))  
 
 
     var marker = defs.selectAll('marker')
